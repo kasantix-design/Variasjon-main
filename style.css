@@ -1,0 +1,310 @@
+/* ============================================================
+   VARIASJON – GLOBAL STYLIING
+   Felles CSS for hele prosjektet
+============================================================ */
+
+/* ---------------------------
+   DESIGNVARIABLER
+--------------------------- */
+:root{
+  --ink:#0a0a0a;
+  --paper:#ffffff;
+  --link:#0b6b6b;
+  --muted:#666;
+  --maxw:1100px;
+
+  --accent:#ffd54d;     /* oker default */
+  --bg-soft:#f6e7b2;    /* lys oker */
+}
+
+/* TEMAER */
+.theme-oker{
+  --accent:#ffd54d;
+  --bg-soft:#f6e7b2;
+}
+
+.theme-blue{
+  --accent:#3c74c9;
+  --bg-soft:#eaf3ff;
+}
+
+.theme-pink{
+  --accent:#d9568c;
+  --bg-soft:#ffeaf2;
+}
+
+.theme-green{
+  --accent:#2ba86a;
+  --bg-soft:#eafaf1;
+}
+
+/* ---------------------------
+   BASE
+--------------------------- */
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+
+body{
+  font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  color:var(--ink);
+  background:var(--paper);
+}
+
+a{color:var(--link)}
+.container{
+  max-width:var(--maxw);
+  margin:0 auto;
+  padding:0 clamp(16px,3vw,32px);
+}
+
+/* ---------------------------
+   HEADER
+--------------------------- */
+header.site-header{
+  background:var(--paper);
+  color:var(--ink);
+}
+
+.mast{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  padding:24px 0;
+  gap:24px;
+}
+
+.logo{
+  margin:0;
+  font-size:clamp(40px,8vw,96px);
+  font-weight:900;
+  letter-spacing:.06em;
+}
+
+.subtitle{
+  margin:0;
+  line-height:1.1;
+  text-transform:uppercase;
+  font-weight:800;
+}
+
+.subtitle .line{
+  display:block;
+  font-size:clamp(14px,2.2vw,22px);
+  letter-spacing:.06em;
+}
+
+/* ---------------------------
+   NAVIGASJON
+--------------------------- */
+nav.tabs{
+  background:#fff;
+  border-bottom:1px solid #eee;
+  position:relative;
+  z-index:5;
+}
+
+.tabs .row{
+  display:flex;
+  gap:12px;
+  padding:12px 0;
+  flex-wrap:wrap;
+}
+
+.tab{
+  display:inline-block;
+  padding:10px 14px;
+  border-radius:999px;
+  border:2px solid var(--ink);
+  text-decoration:none;
+  color:var(--ink);
+  font-weight:700;
+  transition:.15s ease;
+}
+
+.tab:hover{
+  background:var(--ink);
+  color:#fff;
+  transform:translateY(-1px);
+}
+
+.tab[aria-current="page"]{
+  background:var(--ink);
+  color:#fff;
+}
+
+/* Accent stripe */
+.accent-bar{
+  height:12px;
+  background:var(--accent);
+}
+
+/* ---------------------------
+   PAGE WRAP
+--------------------------- */
+.page-wrap{
+  background:var(--bg-soft);
+}
+
+main.container{
+  padding-top:24px;
+  padding-bottom:40px;
+}
+
+/* ---------------------------
+   GRID / ARTIKLER
+--------------------------- */
+.grid{
+  display:grid;
+  gap:24px;
+}
+
+.grid-news{
+  grid-template-columns:1fr;
+}
+
+@media (min-width:900px){
+  .grid-news{
+    grid-template-columns:2fr 1fr;
+  }
+}
+
+.article,
+.sidebar{
+  background:#fff;
+  border-radius:16px;
+  border:1px solid #eee;
+}
+
+.pad{padding:18px}
+
+.article h2{
+  margin:0 0 8px;
+  font-size:clamp(22px,3vw,28px);
+}
+
+.lead{
+  margin:0 0 14px;
+  color:var(--muted);
+}
+
+.byline{
+  margin-bottom:12px;
+  color:var(--muted);
+  font-size:14px;
+}
+
+.article .body{
+  column-width:38ch;
+  column-gap:2.2rem;
+}
+
+.pull{
+  background:#f3f7f7;
+  padding:10px 12px;
+  margin:14px 0;
+  border-left:6px solid #cfe7e7;
+  font-weight:600;
+}
+
+/* Sidebar */
+.list{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+.list li{
+  padding:8px 0;
+  border-bottom:1px dashed #eee;
+}
+
+.list li:last-child{
+  border-bottom:none;
+}
+
+/* ---------------------------
+   COACHING / PORTAL
+--------------------------- */
+.coach-hero{
+  display:grid;
+  gap:16px;
+  align-items:start;
+}
+
+.coach-photo img{
+  width:220px;
+  height:220px;
+  object-fit:cover;
+  border-radius:16px;
+  border:2px solid #fff;
+  box-shadow:0 4px 20px rgba(0,0,0,.06);
+}
+
+@media (min-width:860px){
+  .coach-hero{
+    grid-template-columns:240px 1fr;
+  }
+}
+
+/* Buttons */
+.btn{
+  display:inline-block;
+  padding:10px 16px;
+  border-radius:12px;
+  border:2px solid var(--ink);
+  text-decoration:none;
+  font-weight:600;
+  color:var(--ink);
+}
+
+.btn.solid{
+  background:var(--ink);
+  color:#fff;
+}
+
+/* ---------------------------
+   FOOTER
+--------------------------- */
+footer.site-footer{
+  border-top:1px solid #eee;
+  background:#fff;
+}
+
+footer .foot{
+  padding:16px 0;
+  color:#444;
+  text-align:center;
+}
+
+/* ---------------------------
+   JITSI IFRAME
+--------------------------- */
+.jitsi-frame{
+  width:100%;
+  height:70vh;
+  border:0;
+  border-radius:12px;
+  overflow:hidden;
+}
+
+/* ---------------------------
+   VIPPS BUTTON
+--------------------------- */
+.vipps-btn{
+  display:inline-block;
+  background:#ff5b24;
+  padding:12px 20px;
+  color:white;
+  font-weight:700;
+  border-radius:14px;
+  text-decoration:none;
+  transition:0.15s;
+}
+
+.vipps-btn:hover{
+  opacity:.9;
+}
+
+/* UTIL */
+.center{text-align:center}
+.hidden{display:none}
