@@ -1,1 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- =====================
+       HOVEDSIDER
+  ====================== -->
+  <url>
+    <loc>https://dittdomene.no/</loc>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://dittdomene.no/index.html</loc>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://dittdomene.no/utgaver.html</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://dittdomene.no/om.html</loc>
+    <priority>0.8</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://dittdomene.no/kontakt.html</loc>
+    <priority>0.8</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://dittdomene.no/podcaster.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- =====================
+       COACH-ROM (PORTAL)
+       Disse er indekserbare,
+       fordi de har statisk innhold.
+  ====================== -->
+
+  <url>
+    <loc>https://dittdomene.no/coach-mai.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://dittdomene.no/coach-reidun.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- =====================
+       JITSI-ROM
+       ⚠️ Disse bør IKKE indekseres
+       fordi møter er private.
+       Derfor er de inkludert
+       men satt til very low priority.
+  ====================== -->
+
+  <url>
+    <loc>https://dittdomene.no/jitsi/mai-room.html</loc>
+    <priority>0.1</priority>
+    <changefreq>never</changefreq>
+  </url>
+
+  <url>
+    <loc>https://dittdomene.no/jitsi/reidun-room.html</loc>
+    <priority>0.1</priority>
+    <changefreq>never</changefreq>
+  </url>
+
+
+  <!-- =====================
+       LOGIN + DASHBOARD
+       (SEO bør ignorere disse)
+  ====================== -->
+
+  <url>
+    <loc>https://dittdomene.no/login.html</loc>
+    <priority>0.2</priority>
+    <changefreq>never</changefreq>
+  </url>
+
+  <url>
+    <loc>https://dittdomene.no/dashboard.html</loc>
+    <priority>0.2</priority>
+    <changefreq>never</changefreq>
+  </url>
+
+  <!-- =====================
+       PAKKER & FORSIDER (fra InKasa)
+       (Hvis du også vil ha dem i sitemap)
+  ====================== -->
+
+  <url>
+    <loc>https://dittdomene.no/pakker.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://dittdomene.no/prosjekter.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+</urlset>
 
