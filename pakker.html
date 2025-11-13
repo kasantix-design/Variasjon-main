@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Pakker – Variasjon Coaching</title>
+  <meta name="description" content="Velg mellom Basis, Komplett eller Premium coachingpakker for nevrovarierte. Tilpasset støtte, struktur og videomøter." />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* Scroll animation */
+    .fade-section {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.9s ease;
+    }
+    .fade-section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Pakkebokser */
+    .pakke {
+      background: rgba(255,255,255,0.75);
+      border: 1px solid #eee;
+      border-radius: 18px;
+      padding: 28px;
+      margin: 60px auto;
+      max-width: 780px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+      backdrop-filter: blur(3px);
+    }
+    .pakke h2 {
+      margin-top: 0;
+      font-size: clamp(28px,4vw,36px);
+      font-family: var(--font-serif);
+    }
+    .pakke ul {
+      padding-left: 20px;
+      line-height: 1.7;
+    }
+    .pakke .cta-row {
+      margin-top: 20px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+
+
+<body class="theme-oker">
+<header class="site-header">
+  <div class="container mast">
+    <h1 class="logo">PAKKER</h1>
+    <p class="subtitle">
+      <span class="line">Coaching</span>
+      <span class="line">for</span>
+      <span class="line">nevrovarierte</span>
+    </p>
+  </div>
+
+  <nav class="tabs">
+    <div class="container row">
+      <a class="tab" href="index.html">Hjem</a>
+      <a class="tab" href="coaching.html">Coaching</a>
+      <a class="tab" href="pakker.html" aria-current="page">Pakker</a>
+    </div>
+  </nav>
+  <div class="accent-bar"></div>
+</header>
+
+<div class="page-wrap">
+<main class="container">
+
+  <!-- ===================== BASIS ===================== -->
+  <section id="basis" class="pakke fade-section">
+    <h2>Basis</h2>
+    <p class="lead">En god start for deg som ønsker jevnlig støtte.</p>
+    <ul>
+      <li>2 videomøter per måned</li>
+      <li>Oppgaver og refleksjoner i egen portal</li>
+      <li>Chat-støtte innenfor åpningstid</li>
+    </ul>
+    <div class="cta-row">
+      <a class="btn solid" href="#">Velg Basis</a>
+      <a class="btn" href="#">Vipps betaling</a>
+    </div>
+  </section>
+
+  <!-- ===================== KOMPLETT ===================== -->
+  <section id="komplett" class="pakke fade-section">
+    <h2>Komplett</h2>
+    <p class="lead">For deg som ønsker tett oppfølging og mer støtte.</p>
+    <ul>
+      <li>4 videomøter per måned</li>
+      <li>Personlig oppfølgingsplan</li>
+      <li>Oppgaver, artikler og verktøy</li>
+      <li>Chat-støtte hele uken</li>
+    </ul>
+    <div class="cta-row">
+      <a class="btn solid" href="#">Velg Komplett</a>
+      <a class="btn" href="#">Vipps betaling</a>
+    </div>
+  </section>
+
+  <!-- ===================== PREMIUM ===================== -->
+  <section id="premium" class="pakke fade-section">
+    <h2>Premium</h2>
+    <p class="lead">For deg som trenger mest mulig støtte og fleksibilitet.</p>
+    <ul>
+      <li>Ubegrensede videomøter (rimelig bruk)</li>
+      <li>Daglig oppfølging</li>
+      <li>Prioritert chat og kalender</li>
+      <li>Tilgang til alle kurs og ressurser</li>
+    </ul>
+    <div class="cta-row">
+      <a class="btn solid" href="#">Velg Premium</a>
+      <a class="btn" href="#">Vipps betaling</a>
+    </div>
+  </section>
+
+</main>
+</div>
+
+<footer class="site-footer">
+  <div class="container foot">
+    <small>© 2025 Variasjon Coaching</small>
+  </div>
+</footer>
+
+<!-- Scroll-animasjon -->
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add("visible");
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll(".fade-section").forEach(sec => obs.observe(sec));
+</script>
+
+</body>
+</html>
