@@ -5,69 +5,89 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Kontakt – Variasjon</title>
-  <meta name="description" content="Kontakt Variasjon – send inn spørsmål, samarbeid eller pressehenvendelser." />
+  <meta name="description" content="Ta kontakt med Variasjon – tidsskrift og coaching for nevrovarierte. Send spørsmål, forespørsler eller samarbeid." />
 
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body class="theme-pink">
-<header class="site-header">
-  <div class="container mast">
-    <h1 class="logo">VARIASJON</h1>
-    <p class="subtitle">
-      <span class="line">Tidsskrift</span>
-      <span class="line">for</span>
-      <span class="line">nevrovarierte</span>
-    </p>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container mast" role="banner">
+      <h1 class="logo">VARIASJON</h1>
+      <p class="subtitle">
+        <span class="line">Tidsskrift</span>
+        <span class="line">for</span>
+        <span class="line">nevrovarierte</span>
+      </p>
+    </div>
+
+    <nav class="tabs">
+      <div class="container row">
+        <a class="tab" href="index.html">Hjem</a>
+        <a class="tab" href="utgaver.html">Utgaver</a>
+        <a class="tab" href="om.html">Om</a>
+        <a class="tab" href="kontakt.html" aria-current="page">Kontakt</a>
+        <a class="tab" href="podcaster.html">Podcaster</a>
+      </div>
+    </nav>
+
+    <div class="accent-bar"></div>
+  </header>
+
+
+  <!-- PAGE WRAP -->
+  <div class="page-wrap">
+    <main class="container" role="main">
+
+      <article class="article">
+        <div class="pad">
+
+          <h2>Kontakt oss</h2>
+          <p class="lead">Send oss spørsmål, forespørsler eller samarbeid.</p>
+
+          <!-- 🎉 NETLIFY FORM -->
+          <form 
+            name="kontakt" 
+            method="post" 
+            data-netlify="true" 
+            data-netlify-honeypot="bot-field" 
+            action="/success.html">
+
+            <!-- skjult felt -->
+            <input type="hidden" name="form-name" value="kontakt">
+            <p class="hidden">
+              <label>Ikke fyll inn dette: <input name="bot-field" /></label>
+            </p>
+
+            <label>Navn<br>
+              <input type="text" name="navn" required />
+            </label><br><br>
+
+            <label>E-post<br>
+              <input type="email" name="epost" required />
+            </label><br><br>
+
+            <label>Melding<br>
+              <textarea name="melding" rows="6" required></textarea>
+            </label><br><br>
+
+            <button class="btn solid" type="submit">Send melding</button>
+          </form>
+
+        </div>
+      </article>
+
+    </main>
   </div>
 
-  <nav class="tabs">
-    <div class="container row">
-      <a class="tab" href="index.html">Hjem</a>
-      <a class="tab" href="utgaver.html">Utgaver</a>
-      <a class="tab" href="om.html">Om</a>
-      <a class="tab" href="kontakt.html" aria-current="page">Kontakt</a>
-      <a class="tab" href="coaching.html">Coaching</a>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container foot">
+      <small>© 2025 Variasjon · <a href="mailto:kontakt.variasjon@proton.me">kontakt.variasjon@proton.me</a></small>
     </div>
-  </nav>
-  <div class="accent-bar"></div>
-</header>
-
-
-<div class="page-wrap">
-<main class="container">
-
-  <h2>Kontakt oss</h2>
-  <p class="lead">Send oss spørsmål eller forespørsler — vi svarer så fort vi kan.</p>
-
-  <article class="article" style="margin-top:24px">
-    <div class="pad">
-
-      <form action="#" method="post">
-        <label for="navn">Navn</label><br>
-        <input id="navn" name="navn" type="text" required style="width:100%;padding:10px;margin:6px 0 14px;border-radius:8px;border:1px solid #ccc">
-
-        <label for="epost">E-post</label><br>
-        <input id="epost" name="epost" type="email" required style="width:100%;padding:10px;margin:6px 0 14px;border-radius:8px;border:1px solid #ccc">
-
-        <label for="melding">Melding</label><br>
-        <textarea id="melding" name="melding" rows="6" required style="width:100%;padding:10px;margin:6px 0 20px;border-radius:8px;border:1px solid #ccc"></textarea>
-
-        <button class="btn solid" type="submit">Send melding</button>
-      </form>
-
-    </div>
-  </article>
-
-</main>
-</div>
-
-
-<footer class="site-footer">
-  <div class="container foot">
-    <small>© 2025 Variasjon</small>
-  </div>
-</footer>
+  </footer>
 
 </body>
 </html>
